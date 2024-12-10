@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descripción del Curso</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/otra_pagina2.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    {% extends "layout.html" %} {% block title %}Descripción del Curso{%
+    endblock %} {% block content %}
+    <div class="container mt-4">
+      <h1 class="text-center mb-4">Descripción del Curso</h1>
+      <div id="descripcion-container" class="course-details">
+        <!-- Aquí se añadirán dinámicamente los detalles del curso -->
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/otra_pagina2.js') }}"></script>
+    {% endblock %}
+  </body>
+</html>

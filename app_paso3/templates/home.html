@@ -1,0 +1,165 @@
+{% extends "layout.html" %}  <!-- declaro de donde traigo la plantilla -->    <link href="carousel.css" rel="stylesheet">
+
+{% block content %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+
+    <!-- Example Code -->
+    
+    <main>
+      <div id="carouselExample" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ url_for('static', filename='img/una imagen de programación 1.png') }}" width="100%" height="70%" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{{ url_for('static', filename='img/una imagen de programación 2.png') }}" width="100%" height="70%" class="card-img-top" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{{ url_for('static', filename='img/una imagen de programación 3.png') }}" width="100%" height="70%" class="card-img-top" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    
+
+    
+    
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div>
+    <br>
+    <br>
+  </div>
+    <div class="col-lg-4 ">
+      <div class="d-flex justify-content-center align-items-center">
+      <img src="{{ url_for('static', filename='img/resolución de problemas.png') }}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></text>
+      <br>
+      <br>
+    </div>
+
+  <div class="d-flex flex-column align-items-center">
+    <div class="text-center ">
+      <h4 class="fw-normal text-justify" >Resolución de Problemas</h4>
+      <p>La programación te enseña a descomponer problemas complejos en pasos manejables y encontrar soluciones eficientes. Esta habilidad es útil en la vida cotidiana, ya que te permite abordar desafíos con una mentalidad estructurada y lógica.</p>
+  </div>
+</div>
+
+    </div><!-- /.col-lg-4 -->
+ <!--------------------------------------------------------------------------------------------------------->
+
+ <div class="col-lg-4 ">
+  <div class="d-flex justify-content-center align-items-center">
+    <img src="{{ url_for('static', filename='img/Pensamiento Creativo en el contexto de programación.png') }}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></text>><br>
+  <br>
+</div>
+
+<div class="d-flex flex-column align-items-center">
+<div class="text-center ">
+  <h4 class="fw-normal text-justify" >Pensamiento Creativo</h4>
+  <p>Al programar, desarrollas la capacidad de pensar de manera innovadora y creativa. Crear nuevos algoritmos y encontrar formas únicas de resolver problemas fomenta la creatividad, una herramienta invaluable en cualquier campo profesional y personal</p>
+</div>
+</div>
+
+</div><!-- /.col-lg-4 -->
+
+    <!--   ------------------------                 -->
+
+    <div class="col-lg-4 ">
+      <div class="d-flex justify-content-center align-items-center">
+        <img src="{{ url_for('static', filename='img/Automatización y Eficiencia en programación.png') }}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></text>>
+        <br>
+      <br>
+    </div>
+
+  <div class="d-flex flex-column align-items-center">
+    <div class="text-center ">
+      <h4 class="fw-normal text-justify" >Automatización y Eficiencia</h4>
+      <p>La programación te permite automatizar tareas repetitivas, ahorrando tiempo y reduciendo errores. Esta habilidad no solo mejora la productividad en el trabajo, sino que también puede aplicarse a la vida diaria para hacer más eficientes tareas como la gestión del tiempo y la organización personal.</p>
+  </div>
+</div>
+
+    </div><!-- /.col-lg-4 -->
+   <!---------------------------------->
+
+
+
+  <!-- START THE FEATURETTES -->
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">Curso Inicial de Programación</h2>
+      <p class="lead">Empezar con un curso inicial de programación tiene un impacto significativo en tu vida cotidiana. Aprenderás a pensar de manera lógica y estructurada, lo que te ayudará a resolver problemas de manera más eficiente en tu día a día. Además, desarrollar tus propias aplicaciones simples puede automatizar tareas repetitivas, ahorrándote tiempo y esfuerzo. Por último, te abrirá puertas a nuevas oportunidades de aprendizaje y crecimiento personal, dándote confianza en tus habilidades tecnológicas.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="{{ url_for('static', filename='img/Curso Inicial de Programación.png') }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  width="450" height="400" alt="..."  aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text>
+
+     </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+      <h2 class="featurette-heading fw-normal lh-1">Curso Intermedio de Programación</h2>
+      <p class="lead">Un curso intermedio de programación eleva tus habilidades a un nivel donde puedes abordar problemas más complejos y diseñar soluciones más robustas. Esto se traduce en una mayor capacidad para gestionar proyectos personales y profesionales de manera más efectiva. Además, al profundizar en estructuras de datos y bases de datos, serás capaz de manejar y analizar grandes volúmenes de información, mejorando tu toma de decisiones en diversos aspectos de tu vida.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+      <img src="{{ url_for('static', filename='img/Curso Intermedio de Programación.png') }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  width="450" height="400" alt="..."  aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text>>
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading fw-normal lh-1">Curso Avanzado de Programación</h2>
+      <p class="lead">El curso avanzado te prepara para roles de liderazgo en el ámbito tecnológico, permitiéndote diseñar y optimizar sistemas de alto rendimiento. En tu vida diaria, esto significa que podrás asumir proyectos ambiciosos con confianza, ya sea en tu trabajo o en tus pasatiempos. Desarrollarás una mentalidad crítica y estratégica, aplicable a cualquier desafío que enfrentes, y te convertirás en un recurso valioso para cualquier equipo o comunidad en la que participes.</p>
+    </div>
+    <div class="col-md-5">
+      <img src="{{ url_for('static', filename='img/Curso Avanzado de Programación.png') }}" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"  width="450" height="400" alt="..."  aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em"></text>
+
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->
+
+
+
+</main>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+{% endblock%}

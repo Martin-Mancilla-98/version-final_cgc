@@ -1,0 +1,59 @@
+{% extends "layout.html" %} {% block title %}Contáctanos{% endblock %} {% block
+content %}
+<main>
+  <section class="contact mt-4">
+    <div class="container">
+      <div class="contact-content p-4 shadow-sm rounded bg-light">
+        <form id="contact-form" class="form">
+          <h3 class="tag text-center mb-4"><span>Contactanos</span></h3>
+          <div class="mb-3">
+            <label for="name" class="form-label"
+              >Nombre Completo <span class="text-danger">*</span></label
+            >
+            <input
+              name="name"
+              required
+              type="text"
+              id="name"
+              placeholder="Tu nombre"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label"
+              >Correo electrónico <span class="text-danger">*</span></label
+            >
+            <input
+              name="email"
+              type="email"
+              id="email"
+              required
+              placeholder="Tu correo electrónico"
+              class="form-control"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea
+              id="message"
+              name="message"
+              cols="30"
+              rows="5"
+              placeholder="Escribe tu mensaje"
+              class="form-control"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Enviar Mensaje
+          </button>
+        </form>
+        <div id="response-message" class="mt-3 text-center"></div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="{{ url_for('static', filename='js/contacts.js') }}"></script>
+{% endblock %}

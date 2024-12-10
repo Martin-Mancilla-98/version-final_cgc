@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestros Cursos</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/about.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    {% extends "layout.html" %} {% block title %}Nuestros Cursos{% endblock %}
+    {% block head %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/about.css') }}"
+    />
+    {% endblock %} {% block content %}
+    <section class="container my-5">
+      <h1 class="text-center mb-4">Nuestros Cursos</h1>
+      <div class="search-bar text-center mb-4">
+        <input
+          type="text"
+          id="search"
+          class="form-control"
+          placeholder="Buscar curso..."
+          aria-label="Buscar curso"
+        />
+      </div>
+      <div
+        id="card-deck"
+        class="row row-cols-1 row-cols-md-3 g-4 justify-content-center"
+      >
+        <!-- Aquí se añadirán dinámicamente las tarjetas de cursos -->
+      </div>
+    </section>
+
+    <!-- Modal para detalles del curso -->
+    <div
+      class="modal fade"
+      id="courseModal"
+      tabindex="-1"
+      aria-labelledby="courseModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="courseModalLabel">
+              Detalles del Curso
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center mb-3">
+              <img
+                id="courseImage"
+                class="img-fluid"
+                src=""
+                alt="Imagen del curso"
+              />
+            </div>
+            <h4 id="courseTitle"></h4>
+            <p><strong>Duración:</strong> <span id="courseDuration"></span></p>
+            <p><strong>Valor:</strong> <span id="courseValue"></span></p>
+            <p id="courseDescription"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+    {% endblock %}
+  </body>
+</html>

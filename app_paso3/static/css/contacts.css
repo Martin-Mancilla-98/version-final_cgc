@@ -1,0 +1,80 @@
+:root {
+  --font: "Oxygen", sans-serif;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --background: #f8f9fa;
+  --text: #343a40;
+  --white: #ffffff;
+  --error: #dc3545;
+  --form-bg: #f2f2f2;
+  --btn-hover-bg: #0056b3;
+  --gradient: linear-gradient(135deg, #e0e0e0 0%, #f8f8f8 100%);
+}
+
+body {
+  font-family: var(--font);
+  background: var(--gradient);
+  margin: 0;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background-color: var(--form-bg);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-hover-bg);
+  border-color: var(--btn-hover-bg);
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: none;
+}
+
+.contact-content .tag {
+  font-size: 2rem;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+#response-message {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+.bg-light {
+  background: var(--form-bg);
+}
+
+.contact-content {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
